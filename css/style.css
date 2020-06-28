@@ -1,6 +1,10 @@
 .inline-block{
     display: inline-block;
     vertical-align: top;
+    padding: 0%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 .logo{
     padding: 3%;
@@ -17,16 +21,12 @@ grid-template-columns: 15% 85%;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 justify-content: center;
-}
-ul{
-    width: 100%;
     vertical-align: top;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 li{
     padding: 0%;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
 }
 .heroImg{
     display: grid;
@@ -43,7 +43,41 @@ grid-area: photo;
     grid-area: descrip;
     font-family: Verdana, Tahoma, sans-serif;
 }
-
+.skillGrid{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: lightblue;
+    padding: 50px;
+    margin: 15px;
+}
+.firstSkill, .secondSkill, .thirdSkill, .fourthSkill{
+    align-items: center;
+    justify-content: center;
+} 
+.workGrid {
+    margin: 0px 5%;
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "bedroom Textone"
+    "couches textwo"
+    "bed textthree"
+    ;
+  }
+  .categoryGridArea {
+    background-position: center;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content:center;
+    align-items: center;
+    justify-content: center;
+  }
+button{
+    max-width: 200px;
+    max-height: 100px;
+}
 .footer{
     background-color: #373738;
     padding: 2%;
@@ -53,6 +87,34 @@ grid-area: photo;
 .resumebutton{
     align-self: center;
     grid-area: resume;
-    width: 100px;
     height: 50px;
 }
+@media only screen and (max-width:600){
+    .skillGrid{
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "firstSkill"
+        "secondSkill"
+        "thirdSkill"
+        "fourthSkill";
+    }
+
+ .workGrid{
+        grid-template-rows: 300px 300px 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "bedroom" 
+        "Textone"
+        "couches" 
+        "textwo"
+        "bed" 
+        "textthree";
+    }
+    .footerlist{
+        display: inline-block;
+        vertical-align: bottom;
+        padding: 0%;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }}    
